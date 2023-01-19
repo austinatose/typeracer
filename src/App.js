@@ -1,20 +1,21 @@
+import React from "react";
 import './App.css';
-import {Routes, Route, useNavigate} from 'react-router-dom';
+import {BrowserRouter as Router, Routes, Route} from 'react-router-dom';
 
-export default function App() {
-  const navigate = useNavigate;
+import Home from "./pages/home"
+import Race from "./pages/race"
 
-  const gotoRace = () => {
-    console.log('button clicked');
-
-  }
-
+const App = () => {
   return (
     <div className="App">
-      <header className="App-header">
-        <h1>typeracer</h1>
-        <button type="button" onClick={gotoRace}>Click me to start</button>
-      </header>
+      <Router>
+        <Routes>
+          <Route path="/" element={<Home />} />
+          <Route path="/race" element={<Race />} />
+        </Routes>
+      </Router>
     </div>
   );
 }
+
+export default App;
