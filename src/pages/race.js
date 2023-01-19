@@ -4,7 +4,7 @@ import { useNavigate } from "react-router-dom";
 const Home = () => {
   return (
     <div>
-      <h1>Home</h1>
+      <h1>race here ish</h1>
     </div>
   );
 }

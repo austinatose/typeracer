@@ -36,3 +36,12 @@
     transform: rotate(360deg);
   }
 }
+
+.button {
+  transition-duration: 0.4s;
+}
+
+.button:hover {
+  background-color: #4CAF50; /* Green */
+  color: white;
+}
