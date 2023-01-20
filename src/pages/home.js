@@ -6,9 +6,9 @@ const Home = (props) => {
 
   return (
     <div>
-      <header className="App-header">
+      <header className = "App-header">
         <h1>typeracer</h1>
-        <button onClick={() => navigate("/race")}>Click me to start</button>
+        <button onClick = {() => navigate("/race")}>Click me to start</button>
       </header>
     </div>
   );

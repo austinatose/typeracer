@@ -7,11 +7,11 @@ import Race from "./pages/race"
 
 const App = () => {
   return (
-    <div className="App">
+    <div className = "App">
       <Router>
         <Routes>
-          <Route path="/" element={<Home />} />
-          <Route path="/race" element={<Race />} />
+          <Route path = "/" element = {<Home />} />
+          <Route path = "/race" element = {<Race />} />
         </Routes>
       </Router>
     </div>
