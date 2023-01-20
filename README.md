@@ -42,8 +42,7 @@ You don't have to ever use `eject`. The curated feature set is suitable for smal
 # TODO
 
 - [x] Homepage
-- [ ] Tace textbox
-- [ ] Textbox clearing after space
+- [x] Basic race implementation
 - [ ] Countdown
 - [ ] End screen
 - [ ] Make stats counters
