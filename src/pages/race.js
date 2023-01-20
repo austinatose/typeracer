@@ -26,6 +26,7 @@ const Race = () => {
           insertTyping(key);
         }
       }}
+      tabIndex={0}
       >
       {letter.split('').map((char, index) => {
         var state = letterState[index];
