@@ -5,7 +5,7 @@ import useTypingGame, { CharStateType } from 'react-typing-game-hook';
 const RaceText = () => {
 
     const {
-        states: { chars, charsState },
+        states: { chars, charsState, errorChar, correctChar, endTime, startTime, length },
         actions: { insertTyping, resetTyping, deleteTyping },
     } = useTypingGame("The quick brown fox jumps over the lazy dog. The quick brown fox jumps over the lazy dog. The quick brown fox jumps over the lazy dog.");
 
@@ -40,6 +40,10 @@ const RaceText = () => {
                 );
             })}
             </h1>
+            <h4 className="stats">Errors: {errorChar}</h4>
+            <h4 className="stats">Time taken: {Math.floor((endTime - startTime) / 1000)} seconds</h4>
+            <h4 className="stats">WPM: {Math.floor(length/Math.floor((endTime - startTime) / 1000 / 60))}</h4>
+            <h4 className="stats">Accuracy: {Math.floor((1 - (errorChar/(errorChar + correctChar))) * 100)}%</h4>
         </>
     )
 }

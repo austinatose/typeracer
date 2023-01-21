@@ -4,7 +4,6 @@ import useTypingGame, { CharStateType } from 'react-typing-game-hook';
 
 import Instructions from '../components/instructions';
 import RaceText from '../components/racetext';
-import Stats from '../components/stats';
 
 class endStats extends React.Component {
   // TODO: make wpm appear at end?
@@ -25,7 +24,6 @@ const Race = () => {
     <div className="race">
       { show ? <Instructions /> : null }
       <RaceText onClick={() => setShow(true)} />
-      <Stats />
     </div>
   );
 };
