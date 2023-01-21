@@ -3,6 +3,7 @@ import { useNavigate } from 'react-router-dom';
 
 const Home = (props) => {
   const navigate = useNavigate();
+  window.$racetext = "The quick brown fox jumps over the lazy dog. The quick brown fox jumps over the lazy dog. The quick brown fox jumps over the lazy dog."; 
 
   return (
     <div>

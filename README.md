@@ -15,3 +15,7 @@ This is boostrapped with `create-react-app`, and uses [`react-typing-game-hook`]
   - [ ] Fix time taken (Hide until finished or live update)
 - [ ] Sentence gen
 - [ ] Settings
+
+- [x] Move `race.js` elements into separate components
+- [ ] Fix disappearing instructions
+- [ ] Make sentence global
