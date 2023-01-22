@@ -17,5 +17,5 @@ This is boostrapped with `create-react-app`, and uses [`react-typing-game-hook`]
 - [ ] Settings
 
 - [x] Move `race.js` elements into separate components
-- [ ] Fix disappearing instructions
+- [x] Fix disappearing instructions
 - [ ] Make sentence global
