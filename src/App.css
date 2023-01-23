@@ -65,7 +65,6 @@
   color: white;
 }
 
-/* CSS */
 .start-button {
   align-items: center;
   appearance: none;
@@ -80,6 +79,7 @@
   fill: currentcolor;
   font-size: 14px;
   font-weight: 500;
+  font-family: 'Roboto', sans-serif;
   height: 48px;
   justify-content: center;
   letter-spacing: .25px;
