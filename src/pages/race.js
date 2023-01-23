@@ -9,14 +9,14 @@ const sentence = "The quick brown fox jumps over the lazy dog.";
 
 const Race = () => {
 
-  const [show, setShow] = useState(false);
+  const [showInstructions, setShowInstructions] = useState(false);
 
   const {
   } = useTypingGame(sentence);
 
   return (
-    <div className="race" onClick={() => setShow(true)}>
-      { show ? null : <Instructions /> }
+    <div className="race" onClick={() => setShowInstructions(true)}>
+      { showInstructions ? null : <Instructions /> }
       <RaceText sentence={sentence}/>
     </div>
   );

@@ -1,5 +1,4 @@
 import React from 'react';
-import { useState } from 'react';
 import useTypingGame, { CharStateType, PhaseType } from 'react-typing-game-hook';
 
 const RaceText = ( { sentence } ) => { //prop used to facilitate the use of different sentences
