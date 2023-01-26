@@ -1,20 +1,22 @@
 import React from 'react';
-import { useState } from 'react';
+import { useState, useEffect } from 'react';
 import useTypingGame from 'react-typing-game-hook';
+import randomWords from 'random-words';
 
 import Instructions from '../components/instructions';
 import RaceText from '../components/racetext';
 import Settings from './settings';
 
-export var sentence = "The quick brown fox jumps over the lazy dog.";
-export function setSentence(value) {
-  sentence = value;
+export var sentence = randomWords({ min: 3, max: 10, exactly: 15, join: ' '});
+export function setSentence(e) {
+  sentence = e;
 }
 
 const Race = () => {
 
-  const [showInstructions, setShowInstructions] = useState(false);
+  const [showInstructions, setShowInstructions] = useState(true);
   const [showSettings, setShowSettings] = useState(false);
+  const [internalSentence, update] = useState();
 
   const {
   } = useTypingGame(sentence);
@@ -23,9 +25,9 @@ const Race = () => {
       <div className='App-header'>
         <button style={{position:"absolute", top:"0", right:"0"}} className="start-button" onClick={() => setShowSettings(true)}>Settings</button>
         {!showSettings ? (
-            <div className="race" onClick={() => setShowInstructions(true)}>
-              { showInstructions ? null : <Instructions /> }
-              <RaceText sentence={sentence}/>
+            <div className="race" onClick={() => setShowInstructions(false)}>
+              { showInstructions ? <Instructions /> : null }
+              <RaceText />
             </div>
         ) : null}
         {showSettings ? (

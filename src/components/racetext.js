@@ -1,7 +1,9 @@
 import React from 'react';
 import useTypingGame, { CharStateType, PhaseType } from 'react-typing-game-hook';
+import randomWords from 'random-words';
+import { sentence, setSentence, forceUpdate } from '../pages/race';
 
-const RaceText = ( { sentence } ) => { //prop used to facilitate the use of different sentences
+const RaceText = () => { //prop used to facilitate the use of different sentences
 
     const {
         states: { chars, charsState, errorChar, correctChar, endTime, startTime, length, phase },
@@ -15,6 +17,13 @@ const RaceText = ( { sentence } ) => { //prop used to facilitate the use of diff
             e.preventDefault();
             const key = e.key;
             if (key === 'Escape') {
+                if (phase === PhaseType.Ended) {
+                    setSentence(
+                        randomWords({ min: 3, max: 10, exactly: sentence.split(" ").length, join: ' '})
+                    );
+                    resetTyping();
+                    return;
+                }
                 resetTyping();
                 return;
             }

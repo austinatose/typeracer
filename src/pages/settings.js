@@ -1,8 +1,7 @@
 import React from 'react';
 import { useState } from 'react';
-import ReactDOM from 'react-dom/client';
 import randomWords from 'random-words';
-import { sentence, setSentence } from '../pages/race'
+import { setSentence } from '../pages/race'
 
 const Settings = () => {
 
