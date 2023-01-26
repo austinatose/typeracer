@@ -3,6 +3,7 @@
 This project was made for CEP WA1 2023.
 
 This is boostrapped with `create-react-app`, and uses [`react-typing-game-hook`](https://github.com/jokarz/react-typing-game-hook).
+Random word generation is done by [`random-words`](https://github.com/apostrophecms/random-words).
 
 # TODO
 
