@@ -22,15 +22,15 @@ const Race = () => {
   const [showSettings, setShowSettings] = useState(false);
 
   return (
-      <div className='App-header'>
-        <button style={{position:"absolute", top:"0", right:"0"}} className="start-button" onClick={() => setShowSettings(true)}>Settings</button>
-        {!showSettings ? (
-            <div className="race" onClick={() => setShowInstructions(false)}>
-              { showInstructions ? <Instructions /> : null }
-              <RaceText />
-            </div>
-        ) : null}
-        {showSettings ? (
+    <div className='App-header'>
+      <button style={{position:"absolute", top:"0", right:"0"}} className="start-button" onClick={() => setShowSettings(true)}>Settings</button>
+      {!showSettings ? (
+        <div className="race" onClick={() => setShowInstructions(false)}>
+          { showInstructions ? <Instructions /> : null }
+          <RaceText />
+        </div>
+      ) : null}
+      {showSettings ? (
         <>
           <button style={{position:"absolute", top:"0", right:"0"}} className="start-button" onClick={() => setShowSettings(false)}>Go back&nbsp;</button>
           <Settings />
