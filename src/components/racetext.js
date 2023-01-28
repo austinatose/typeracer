@@ -15,6 +15,7 @@ const RaceText = () => {
     return (
         <>
             <h1 className="text"
+            style={{padding: '10px'}}
             onKeyDown = {e => {
             e.preventDefault();
             const key = e.key;
