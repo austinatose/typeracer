@@ -1,5 +1,5 @@
 import React from 'react';
-import { useState, useEffect } from 'react';
+import { useState } from 'react';
 import useTypingGame from 'react-typing-game-hook';
 import randomWords from 'random-words';
 
@@ -7,19 +7,19 @@ import Instructions from '../components/instructions';
 import RaceText from '../components/racetext';
 import Settings from './settings';
 
+// exported global variable sentence to be used and edited by racetext.js and settings.js
 export var sentence = randomWords({ min: 3, max: 10, exactly: 15, join: ' '});
 export function setSentence(e) {
   sentence = e;
 }
 
+
+// main race page
 const Race = () => {
 
+  // variables used to show and hide the instructions and settings components, upon clicking the text to start the game and clicking the settings button respectively
   const [showInstructions, setShowInstructions] = useState(true);
   const [showSettings, setShowSettings] = useState(false);
-  const [internalSentence, update] = useState();
-
-  const {
-  } = useTypingGame(sentence);
 
   return (
       <div className='App-header'>
@@ -32,7 +32,7 @@ const Race = () => {
         ) : null}
         {showSettings ? (
         <>
-          <button style={{position:"absolute", top:"0", right:"0"}} className="start-button" onClick={() => setShowSettings(false)}>Go back</button>
+          <button style={{position:"absolute", top:"0", right:"0"}} className="start-button" onClick={() => setShowSettings(false)}>Go back&nbsp;</button>
           <Settings />
         </>
       ) : null}

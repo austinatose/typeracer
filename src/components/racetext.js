@@ -1,10 +1,12 @@
 import React from 'react';
 import useTypingGame, { CharStateType, PhaseType } from 'react-typing-game-hook';
 import randomWords from 'random-words';
-import { sentence, setSentence, forceUpdate } from '../pages/race';
+import { sentence, setSentence } from '../pages/race';
 
-const RaceText = () => { //prop used to facilitate the use of different sentences
+// main typing component
+const RaceText = () => { 
 
+    // from hook
     const {
         states: { chars, charsState, errorChar, correctChar, endTime, startTime, length, phase },
         actions: { insertTyping, resetTyping, deleteTyping },
@@ -12,14 +14,14 @@ const RaceText = () => { //prop used to facilitate the use of different sentence
 
     return (
         <>
-            <h1
+            <h1 className="text"
             onKeyDown = {e => {
             e.preventDefault();
             const key = e.key;
             if (key === 'Escape') {
                 if (phase === PhaseType.Ended) {
                     setSentence(
-                        randomWords({ min: 3, max: 10, exactly: sentence.split(" ").length, join: ' '})
+                        randomWords({ min: 3, max: 10, exactly: sentence.split(" ").length, join: ' '}) // randomise sentence to one of the same length when game ends and user restarts
                     );
                     resetTyping();
                     return;
@@ -37,9 +39,9 @@ const RaceText = () => { //prop used to facilitate the use of different sentence
             }}
             tabIndex={0}
             >
-            {chars.split('').map((char, index) => {
+            {chars.split('').map((char, index) => { // map each character to a span
                 var state = charsState[index];
-                var color = state === CharStateType.Incomplete ? 'white' : state === CharStateType.Correct ? '#90EE90' : 'red';
+                var color = state === CharStateType.Incomplete ? 'white' : state === CharStateType.Correct ? '#90EE90' : 'red'; // green for correct, red for incorrect, white for incomplete
                 return (
                 <span key = {char + index} style = {{ color }}>
                     {char}
@@ -48,7 +50,7 @@ const RaceText = () => { //prop used to facilitate the use of different sentence
             })}
             </h1>
             <div>
-                {phase === PhaseType.Ended && startTime && endTime ? (
+                {phase === PhaseType.Ended && startTime && endTime ? ( // show stats when game ends
                     <>
                         <h4 className="stats">Errors: {errorChar}</h4>
                         <h4 className="stats">Time taken: {Math.floor((endTime - startTime) / 1000)} seconds</h4>

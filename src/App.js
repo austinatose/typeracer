@@ -6,7 +6,7 @@ import Race from "./pages/race"
 
 const App = () => {
 
-  const [toggleStart, setToggleStart] = useState(false);
+  const [toggleStart, setToggleStart] = useState(false); // variable used to show the race component and hide the home component when the user clicks the start button
 
   return (
     <div className="App">
