@@ -10,13 +10,13 @@ Random word generation is done by [`random-words`](https://github.com/apostrophe
 - [x] Homepage
 - [x] Basic race implementation  
 ~~[ ] Countdown~~
-- [ ] End screen
+- [x] End screen
 - [x] Make stats counters
-  - [ ] Fix WPM (Hide until finished or live update)
-  - [ ] Fix time taken (Hide until finished or live update)
-- [ ] Sentence gen
-- [ ] Settings
-- [ ] Document code
+  - [x] Fix WPM (Hide until finished or live update)
+  - [x] Fix time taken (Hide until finished or live update)
+- [x] Sentence gen
+- [x] Settings
+- [x] Document code
 
 - [x] Move `race.js` elements into separate components
 - [x] Fix disappearing instructions
