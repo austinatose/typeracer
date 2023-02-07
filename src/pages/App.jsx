@@ -1,8 +1,8 @@
 import React from "react";
 import { useState } from "react";
-import './App.css';
+import '../css/styles.css';
 
-import Race from "./pages/race"
+import Race from "./race"
 
 const App = () => {
 

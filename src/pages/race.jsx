@@ -1,6 +1,5 @@
 import React from 'react';
 import { useState } from 'react';
-import useTypingGame from 'react-typing-game-hook';
 import randomWords from 'random-words';
 
 import Instructions from '../components/instructions';
@@ -10,7 +9,7 @@ import Settings from './settings';
 // exported global variable sentence to be used and edited by racetext.js and settings.js
 export var sentence = randomWords({ min: 3, max: 10, exactly: 15, join: ' '});
 export function setSentence(e) {
-  sentence = e;
+  sentence = e; 
 }
 
 
