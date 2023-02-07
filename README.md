@@ -21,4 +21,5 @@ Random word generation is done by [`random-words`](https://github.com/apostrophe
 - [x] Move `race.js` elements into separate components
 - [x] Fix disappearing instructions
 - [x] Make sentence global
-- [ ] Prevent sentence regen when custom sentence is being used
+- [x] Prevent sentence regen when custom sentence is being used
+- [ ] Display textlength being changed in settings when button is pressed
