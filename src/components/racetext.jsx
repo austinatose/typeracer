@@ -1,7 +1,7 @@
 import React from 'react';
 import useTypingGame, { CharStateType, PhaseType } from 'react-typing-game-hook';
 import randomWords from 'random-words';
-import { sentence, setSentence } from '../pages/race';
+import { sentence, setSentence, randomiseText } from '../pages/race';
 
 // main typing component
 const RaceText = () => { 
@@ -20,7 +20,7 @@ const RaceText = () => {
             e.preventDefault();
             const key = e.key;
             if (key === 'Escape') {
-                if (phase === PhaseType.Ended) {
+                if (phase === PhaseType.Ended && randomiseText) {
                     setSentence(
                         randomWords({ min: 3, max: 10, exactly: sentence.split(" ").length, join: ' '}) // randomise sentence to one of the same length when game ends and user restarts
                     );

@@ -8,10 +8,11 @@ import Settings from './settings';
 
 // exported global variable sentence to be used and edited by racetext.js and settings.js
 export var sentence = randomWords({ min: 3, max: 10, exactly: 15, join: ' '});
-export function setSentence(e) {
-  sentence = e; 
-}
+export function setSentence(e) {sentence = e;}
 
+// variable used to decide whether to randomise the text after ending the game
+export var randomiseText = true; 
+export function setRandomiseText(e) {randomiseText = e;}
 
 // main race page
 const Race = () => {
