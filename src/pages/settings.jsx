@@ -27,5 +27,3 @@ const Settings = () => {
 }
 
 export default Settings;
-
-//TODO: move inline css to styles.css
